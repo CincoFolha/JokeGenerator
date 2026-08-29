@@ -1,12 +1,12 @@
 import Joke from "./components/Joke";
 
-const App = () => {
+export default function App() {
   return (
-    <div className="App">
-      <h1>Joke Generator Using React and Joke API</h1>
+    <main className="App">
+      <header>
+        <h1>Joke Generator Using React and Joke API</h1>
+      </header>
       <Joke />
-    </div>
+    </main>
   );
-};
-
-export default App;
+}
