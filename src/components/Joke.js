@@ -1,22 +1,21 @@
 import React from "react";
 import Button from "./Button";
+import { useJoke } from "../hooks/useJoke";
 import './Joke.css';
 
 const Joke = () => {
-  const [Joke, setJoke] = React.useState("");
-
-  const fetchApi = () => {
-    fetch("https://sv443.net/jokeapi/v2/joke/Programming?type=single")
-    .then((res) => res.json())
-    .then((data) => setJoke(data.joke));
-  };
+  const { joke, loading, error, fetchJoke } = useJoke();
 
   return (
     <div className="joke">
-      <Button callApi={fetchApi} />
-      <p>{Joke}</p>
+      <p className="joke-text">
+        {loading && "Carregando..."}
+        {!loading && error && error}
+        {!loading && !error && joke}
+      </p>
+      <Button callApi={fetchJoke} disabled={loading} />
     </div>
   );
-}
+};
 
 export default Joke;
