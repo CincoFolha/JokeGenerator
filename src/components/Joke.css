@@ -1,25 +1,48 @@
 
 body {
-  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: gray;
+  /*background: #d00d0d;*/
+  color: #f5f5dc;
+
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .joke {
-  width: auto;
-  height: auto;
-  margin: auto;
+  width: min(90%, 700px);
+  padding: 4px;
+
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: beige;
+  gap: 24px;
+
+  text-align: center;
+
+  background: #151515;
+  border: 1px solid #2d2d2d;
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-  text-align: center;
-  color: beige;
+  color: #c1f590;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.2;
 }
 
 p {
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  max-width: 600px;
+
+  color: #e8e8e8;
+  font-size: 18px;
+  line-height: 1.6;
 }
