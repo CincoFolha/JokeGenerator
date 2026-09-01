@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "./Button";
-import { useJoke } from "../hooks/useJoke";
+import Button from "components/Button/Button";
+import { useJoke } from "hooks/useJoke";
 import './Joke.css';
 
 const Joke = () => {

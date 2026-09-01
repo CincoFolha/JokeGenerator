@@ -1,4 +1,4 @@
-import Joke from "./components/Joke";
+import Joke from "components/Joke/Joke";
 import "./App.css";
 
 export default function App() {
