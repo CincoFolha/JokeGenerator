@@ -1,20 +1,36 @@
 
 button {
-  display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 24px;
+
   background-color: #70a03a;
   color: #ffffff;
+
   border: none;
-  font-size: 16px;
-  cursor: pointer;
   border-radius: 8px;
-  transition: background-color .5s;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 button:hover {
-  background-color: #c1f590;
+  background: #8fc957;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(112, 160, 58, 0.3);
 }
 
 button:active {
-  background-color: #297910;
+  background-color: #4f7a28;
+  transform: translateY(0);
+}
+
+button:focus-visible {
+  outline: 3px solid #c1f590;
+  outline-offset: 3px;
 }
